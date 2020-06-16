@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ComicBooks.Models.ComicBook>
+
+@{
+    ViewData["Title"] = "Random";
+}
+
+<h1>Random Comic Book :)</h1>
+
+@foreach (var item in Model)
+{
+<div>
+    <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+    <h4>Id: @Html.DisplayFor(modelItem => item.Id)</h4>
+    <h4>Release date: @Html.DisplayFor(modelItem => item.ReleaseDate)</h4>
+    <h4>Genre: @Html.DisplayFor(modelItem => item.Genre.Name)</h4>
+    <h4>Price: @Html.DisplayFor(modelItem => item.Price)</h4>
+</div>
+}
